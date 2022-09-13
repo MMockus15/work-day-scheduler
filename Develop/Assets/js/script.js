@@ -1,16 +1,10 @@
 
-
-
-// add current day of the week
-var dayWeek = today.format("[Today is] dddd")
-$("#currentDay").text(dayWeek);
-
-// add current date
+// add current day and date
 var today = moment();
-$("#currentDay").text(today.format("MMM Do, YYYY"));
+$("#currentDay").text(today.format("dddd, MMM Do, YYYY"));
 
 
-// add in timeblack chart for standard business hours
+// add in timeblock chart for standard business hours
 // color code timeblocks to indicate past present of future
 // click into timeblock to add an event
 // add save button and when clicked on the text for that event is saved in local storage
