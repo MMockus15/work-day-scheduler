@@ -3,7 +3,6 @@
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMM Do, YYYY"));
 
-// add in timeblock chart for standard business hours
 
 
 // color code timeblocks / link to css  using movement as current time and past time to indicate past present of future
@@ -11,7 +10,7 @@ $("#currentDay").text(today.format("dddd, MMM Do, YYYY"));
 // can use $(#).children().eq(integer to select which child).addclass("name"); to add classes if neded
 // figure out how to link time to all of that
 
-// click into timeblock to add an event
+// click into timeblock to add an event/ click event
 
 
 // add save button and when clicked on the text for that event is saved in local storage
