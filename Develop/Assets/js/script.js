@@ -1,4 +1,4 @@
-var saveBtn = $("saveBtn");
+var saveBtnEl = $("saveBtn");
 
 // add current day and date
 var today = moment();
@@ -8,7 +8,7 @@ $("#currentDay").text(today.format("dddd, MMM Do, YYYY"));
 function timeBlockColors() {
   let timeBlocks = document.querySelectorAll(".time-block");
   for (let timeBlocks of nodes ) {
-	const today = 12;
+	var today = 12;
 	var currentHour = parInt(timeBlocks.getAttribute("data-time"));
 	
 	if(today > currentHour) {
@@ -22,9 +22,18 @@ function timeBlockColors() {
 
 // manipulate with $(call in class or id)children().css("color", "yellow"); <can pull specific pieces/elements to change
 // can use $(#).children().eq(integer to select which child).addclass("name"); to add classes if neded
-// figure out how to link time to all of that
+
 
 // add save button and when clicked on the text for that event is saved in local storage
+saveBtnEl.on("submit", function () {
+location.relaod()
+
+var time = $(this).parent().attr("id");
+var textInput = $(this).siblings("description").val();
+
+localStorage.setItem(time, textInput);
+});
+
 
 // submit form = var for each form submission area, add handle form to submit (event)
 // input: checked > grabs all inputs to create an array
