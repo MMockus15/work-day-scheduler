@@ -25,27 +25,28 @@ saveBtnEl.on("click", function() {
 
 
 // keep it from deleting on refesh
-// save to local storage 
 
+
+// save to local storage 
 localStorage.setItem(time, textInput);
 
 });
 
 
 // color code timeblocks / link to css  using movement as current time and past time to indicate past present of future
-function timeBlockColors() {
-  let timeBlocks = $(".time-block");
-	var today = $.each(".time-block"), function() {
-	currentHour = parseInt(timeBlocks.getAttribute("data-time"))
-	}
+// function timeBlockColors() {
+//   let timeBlocks = $(".time-block");
+// 	var today = $.each(".time-block"), function() {
+// 	currentHour = parseInt(timeBlocks.getAttribute("data-time"))
+// 	}
 	
-	if(today > currentHour) {
-		$(this).addClass(".future");
-	} else if (currentHour === today) {
-		$(this).addClass(".present");
-	}else {
-		$(this).addClass(".past");
-	}};
+// 	if(today > currentHour) {
+// 		$(this).addClass(".future");
+// 	} else if (currentHour === today) {
+// 		$(this).addClass(".present");
+// 	}else {
+// 		$(this).addClass(".past");
+// 	}};
 
 
 
