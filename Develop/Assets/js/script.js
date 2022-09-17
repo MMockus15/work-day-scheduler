@@ -1,4 +1,6 @@
 var saveBtnEl = $("saveBtn");
+var textInputEl = $(".plan").text;
+var timeEl = $(".hour");
 
 
 // add current day and date
@@ -7,22 +9,27 @@ $("#currentDay").text(today.format("dddd, MMM Do, YYYY"));
 
 
 // add save button and when clicked on the text for that event is saved in local storage
-function saveBtnEl () {
-saveBtnEl.on("submit", function () {
-		
-		
-var time = $(this).siblings(".hour").text();
-var textInput = $(this).siblings(".plan").val();
 
-$.each(textInput, function () {
+// saveBtnEl.on("click", function() {
+// 	here define that text and time 
+// 	and then save it to local storage 
+// 	localStorage.setItem(time, text);
+// 	]
+
+saveBtnEl.on("click", function() {
+
+	var time = timeEl.val();
+	console.log(time);
+	var textInput = textInputEl.val();	
+
 
 
 // keep it from deleting on refesh
 // save to local storage 
 
 localStorage.setItem(time, textInput);
-}
-)})};
+
+});
 
 
 // color code timeblocks / link to css  using movement as current time and past time to indicate past present of future
